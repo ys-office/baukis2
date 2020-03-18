@@ -35,5 +35,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem "rspec-rails"
+  gem "rubocop"
   gem "factory_bot_rails"
 end
