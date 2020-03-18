@@ -36,15 +36,16 @@ jobs:
 
   rspec:
     docker:
-      - image: circleci/ruby:2.6.0-node-browsers-legacy
+      - image: oiax/rails6-deps:latest
         environment:
           RAILS_ENV: test
           POSTGRES_HOST: 127.0.0.1
       - image: circleci/postgres:9.4
         environment:
           POSTGRES_USER: postgres
-          POSTGRES_DB: app_test
-    working_directory: ~/repo
+          POSTGRES_DB: baukis2_test
+          POSTGRES_PASSWORD: password
+    working_directory: ~/baukis2
     steps:
       - checkout
       - restore_cache:
