@@ -8,10 +8,9 @@ describe String do
       expect(s.size).to eq(4)
     end
 
-    xexample "nil の追加" do
+    example "nil は追加できない" do
       s = "ABC"
-      s << nil
-      expect(s.size).not_to eq(4)
+      expect { s << nil }.to raise_error(TypeError)
     end
   end
 end
