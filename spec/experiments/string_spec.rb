@@ -11,7 +11,7 @@ describe String do
     example "nil の追加" do
       s = "ABC"
       s << nil
-      expect(s.size).to eq(4)
+      expect(s.size).not_to eq(4)
     end
   end
 end
